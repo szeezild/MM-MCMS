@@ -52,6 +52,18 @@
     
 }
 
+// to reload after returning from name change
+-(void) viewWillAppear:(BOOL)animated {
+    
+    [self.myTableView reloadData];
+}
+
+
+-(IBAction)unwindFromCreatureVC:(UIStoryboardSegue *)sender {
+    
+    
+}
+
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
@@ -75,6 +87,9 @@
 
 - (IBAction)onAddButtonPressed:(UIButton *)sender {
     
+    
+//  ADD IF STMT TO CHECK FOR BLANK ENTRY
+    
     MagicalCreature *new = [[MagicalCreature alloc] init];
     new.name = self.magicalCreatureTextField.text;
     
@@ -92,11 +107,11 @@
     
     NSIndexPath *indexPath = [self.myTableView indexPathForCell:sender];
     
-    MagicalCreature *creature = [creatures objectAtIndex:indexPath.row];
+    MagicalCreature *thisCreature = [creatures objectAtIndex:indexPath.row];
 
     CreatureViewController *newVC = segue.destinationViewController;
     
-    newVC.creature = creature;
+    newVC.creature = thisCreature;
     
 }
 

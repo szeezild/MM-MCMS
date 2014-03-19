@@ -71,7 +71,7 @@
 //  set the creature obj name property to the nameTextField
     self.creature.name = self.nameTextField.text;
 
-//  I think I need to reload the previous myTableView to show the name change
+//  I need to reload the previous myTableView to show the name change - use viewWillAppear in VC.m
     
     [self.nameTextField resignFirstResponder];
 

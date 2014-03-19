@@ -133,6 +133,7 @@
                                 </state>
                                 <connections>
                                     <action selector="onSaveButtonPressed:" destination="7rr-GJ-G6W" eventType="touchUpInside" id="eYb-KI-qWc"/>
+                                    <segue destination="hXx-w0-921" kind="unwind" unwindAction="unwindFromCreatureVC:" id="x3q-1u-ZqF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -145,6 +146,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QkN-KR-dIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hXx-w0-921" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1253" y="78"/>
         </scene>
